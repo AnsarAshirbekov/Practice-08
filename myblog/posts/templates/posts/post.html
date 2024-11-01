@@ -1,0 +1,11 @@
+
+    <h2> {{ post.title }}</h2>
+    {% if post.image %}
+        <a href="{{ post.image.url }}"></a>
+    {% endif %}
+    <p><i>{{ post.created_at }}</i> </p>
+    <p> {{ post.content | linebreaks }}</p>
+
+    <a href="{% url 'post_list' %}"> Вернуться обратно </a>
+
+    
